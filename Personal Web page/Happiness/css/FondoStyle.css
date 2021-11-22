@@ -1,0 +1,152 @@
+.header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    max-width: 70rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: left;
+}
+
+.header-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+}
+
+/*
+header{
+    font-family: 'Montserrat', sans-serif;
+}*/
+
+.header-video video{
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.header-overlay{
+    height: 150vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.555);
+    left: 0;
+    z-index: 1;
+    padding: .85;
+}
+
+.header-content{
+    z-index: 2;
+}
+
+.header-content {
+    font-family:'Montserrat', sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    bottom: 30%;
+    right: 20%;
+    margin-left: 25px;
+    margin-top: 50%;
+}
+
+.header-content h2 {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 50px;
+    font-family: 00;
+}
+
+.header-content p{
+    font-weight: 25px;
+    font-size: 25px;
+    
+}
+
+.header-content h1 {
+    font-size: 160px;
+    line-height: 160px;
+    width: 100%;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background: url("../Imagenes/fondo.png");
+    -webkit-background-clip: text;
+    background-position: 1 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100%{
+        background-position: 3000px 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .content {
+        padding: 0 3rem;
+    }
+
+    .header-content{
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header-content h1{
+        margin-left: 55px; 
+        display: inline-block;
+ 
+    }
+
+
+
+    .header-content h2{
+        margin-left: 100px;
+    }
+
+    .header-content p{
+        margin-left: 70px;
+        justify-content: space-evenly;
+        line-height: 90%;
+        width: 100%;
+        font-size: 25px;
+        display: inline-block;
+        flex-wrap: wrap;
+    }
+
+    
+    /*
+    .header-content{
+        font-size: 20px;
+        width: 80%;
+        bottom: 10%;
+        margin-bottom: 0px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .header-overlay{
+        width: 200vh;
+        height: 200vw;
+    }
+    }
+
+    .header-video{
+        align-content: center;
+        width: 200vh;
+        height: 200vw;
+    }*/
+}
+
+@media screen and (max-width: 500px){
+
+}

@@ -1,0 +1,536 @@
+.hamburguer{
+    z-index: 15;
+    position: fixed;
+    transition: 1s;
+    top: 30px;
+    right: 30px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px gray;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #f5f7fab9 0%, #c3cfe29c 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+
+.spread{
+    transform: translate(0);
+}
+
+a {
+   font-size: 30px;
+}
+
+.icon-paper-plane-empty{
+    font-size: 27px;
+    text-align: center;
+}
+
+.menu-navegacion a{
+    text-decoration: none;
+    color: #2C2891;
+    transition: all 1s;
+}
+
+.menu-navegacion a:hover{
+    color: transparent;
+    -webkit-text-stroke: 1px #1DB9C3;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    transition: all 1s;
+}
+
+
+/*Código de la pagina*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #642a63;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/*Header*/
+
+header{
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(to right, #43434338 0%, rgba(0, 0, 0, 0.445) 100%), url("../Imagenes/emilia-morariu-SRYkvZa8NhA-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Oxygen', sans-serif;
+}
+
+header .textos-header{
+    display: flex;
+    height: 420px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: white;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.copy{
+    font-weight: 300;
+    font-size: 25px;
+    color: white;
+}
+
+/*Info*/
+
+.contenedor-sobre-proyectos{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.imagen-about-proyects{
+    width: 45%;
+}
+
+.Sobre-proyectos .contenido-textos{
+    width: 45%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 7px;
+}
+
+.contenido-textos h3 span{
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    color: white;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    padding: 4px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*Proyectos*/
+
+.portafolio{
+    background-color: #FBF7F0;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 23%;
+    height: 160px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: white;
+    transform: scale(0);
+    background: rgba(0, 0, 0, 0.438);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria div{
+    text-align: center;
+    width: 60px;
+    
+}
+
+.hover-galeria p{
+    align-items: center;
+    text-align: center;
+}
+
+.hover-galeria p a{
+    font-size: 15px;
+}
+
+.hover-galeria p a{
+   text-decoration: none;
+   color: white;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/*Referencias*/
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 100px;
+}
+
+.cards .card{
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    display: flex;
+    width: 520px;
+    height: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.25s;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .6);
+}
+
+.cards .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cards .card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+
+
+.cards .card .contenido-text-card {
+    width: 200%;
+    color: white;
+}
+
+.cards .card .contenido-text-card p{
+    margin-top: 15px;
+}
+
+.cards .card .contenido-text-card h4{
+    font-size: 25px;
+}
+
+.cards .cards > .contenido-text-card p{
+    font-weight: 300;
+    padding-top: 7px;
+} 
+
+/*Informacion extra*/
+
+.Sobre-info{
+    background: #FBF7F0;
+    padding-bottom: 30px;
+}
+
+.info-cont{
+    display: flex;
+}
+
+.info-ind {
+    align-items: center;
+    margin-left: 150px;
+    width: 28%;
+    text-align: center;
+}
+
+.info-ind img{
+    width: 90%;
+}
+
+
+.info-ind h3 {
+    margin: 10px 0;
+}
+
+.info-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+.content-foo:hover{
+    background-color: white;
+}
+
+.content-foo a h4:hover{
+    color: #414141;
+}
+
+
+footer{
+    background: white;
+    padding-bottom: 0.1px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.foooter-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us{
+    width: 50%;
+    color: rgb(0, 0, 0);
+}
+
+.Nombre{
+    margin-top: 50px;
+    margin-left: 30px;
+    position: relative;
+    font-size: 2.7vw;
+    color: white;
+    -webkit-text-stroke: 0.02vw rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.Nombre::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: black;
+    -webkit-text-stroke: 0vw rgb(0, 0, 0);
+    border-right: 2px solid black;
+    overflow: hidden;
+    animation: animate 3s linear infinite;
+}
+
+.contact-us p{
+    margin-left: 30px;
+}
+
+
+@keyframes animate{
+    0%, 20%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 99%;
+    }
+}
+
+
+.Nombre+p{
+    font-weight: 500;
+}
+
+.social-media a{
+    text-decoration: none;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 25px;
+    width: 60px;
+    height: 60px;
+    border: 1 solid rgb(0, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.social-media-icon:hover{
+    color: darkred;
+    transition: .2s ease-in-out;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.social-media h4{
+    font-size: 15px;
+    line-height: 5px;
+    justify-content: space-evenly;
+}
+
+.social-media h4:nth-child(3){
+    margin-top: 15px;
+}
+
+.social-media h4:nth-child(3){
+    margin-top: 15px;
+}
+
+
+.line{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.521);
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-proyectos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Sobre-proyectos .contenido-textos{
+        width:90%;
+        margin-top: 10%;
+    }
+
+    .imagen-about-proyects{
+        width: 90%;
+    }
+
+    /*Galeria*/
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /*Referencias*/
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card img{
+        width: 60%;
+        margin-right: 7px;
+        margin-left: 15px;
+    }
+
+        /*Info extra*/
+    .info-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .info-ind{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .info-ind img{
+        width: 50%;
+    }
+    
+    .content-foo h4{
+        text-align: center;
+        flex-direction: column;
+        
+    }
+   
+
+    .content-foo li{
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

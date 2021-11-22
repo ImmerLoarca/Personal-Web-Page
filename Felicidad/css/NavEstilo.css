@@ -1,0 +1,134 @@
+:root{
+    --primary: rgba(85, 85, 216, 0);
+    --active2: #f0e5cf88;
+    --white:#ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+.navi-ul {
+    z-index: 3;
+}
+
+.icon{
+    z-index: 4;
+}
+
+ body{
+     background: black;
+ }
+ 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--white);
+    min-height: 4rem;
+}
+
+nav h1{
+    padding-left: 1rem;
+}
+
+nav ul{
+    display: flex;   
+}
+
+nav ul a {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.icon{
+    display: none;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 760px){
+    .navi-ul{
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.301);
+        width: 100%;
+        text-align: left;
+        transition: 0.5s;
+    }
+
+    .navi-ul.active{
+        left:0;
+        top: 4rem;
+    }
+
+    .nav-item{
+        max-width: 2.5rem 0;
+    }
+
+    .icon{
+        display: block;
+        cursor: pointer;
+        padding: .2rem;
+        margin-right: 1rem;
+        color: var(--white);
+    }
+
+    nav ul{
+        flex-direction: column;
+        background-color: var(--primary);
+    }
+
+    nav ul a {
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem;
+        transition: 0.3s;
+    }
+
+    nav a:hover{
+        background-color: var(--active2);
+        color: black;
+    }
+}
+
+
+.navbar ul a::after{
+ content: "";
+ height: 3px;
+ width: 0%;
+ background-image: linear-gradient(to right,#5900ff 9%,#001aff 19%,#0064fa 30%,#07cbfc 40%,#00fff2 48%,#19ffec 58%,#fafafa 73%,#3d5aff 85%,#05fcd3 100%);
+ animation: slidebg 2s linear infinite;;
+ position: absolute;
+ left: 50%;
+ bottom: -5px;
+ transition: all 2s;
+ transform:translateX(-50%);
+}
+
+.navbar ul a:hover::after{
+width: 80%;
+}
+
+@keyframes slidebg{
+    to{
+        background-position:20vw;
+    }
+}
+.follow{
+    margin-top:40px;
+}
+.follow a{
+    color:#000;
+    padding:8px 16px;
+    text-decoration:none;
+}

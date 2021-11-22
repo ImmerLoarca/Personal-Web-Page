@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" href="../Imagenes/Logo.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<title>My music</title>
+</head>
+
+<body>
+	<div class="Container">
+		<!-- LDR -->
+		<div class="Player">
+			<div class="Player_controls">
+				<div class="player__btn player__btn--small">
+					<i class="icon-left"></i>
+				</div>
+				<h5 class="player__title"> Playing now</h5>
+				<div class="player__btn player__btn--small">
+					<i class="icon-heart"></i>
+				</div>
+			</div>
+
+			<div class="player__album">
+			 <img class="player__img" src="https://static.qobuz.com/images/covers/97/91/0060253719197_600.jpg" alt="" />
+			</div>
+			<h2 class="player__artist"><b> Ride </b></h2>
+			<h3 class="player__song"> Lana del Rey  </h3>
+
+			<input class="player__level" type="range" value="5" min="0" />
+
+			<div class="audio--duration">
+				<div class="start">00:01</div>
+				<div class="end">05:10</div>
+			</div>
+
+			<audio class="player__audio" controls id="BTD">
+				<source src="Audio/Lana Del Rey - Ride.mp3" type="Audio/mp3" />
+			</audio>
+
+			<div class="Player_controls">
+				<div class="player__btn player__btn--medium">
+					<i class="icon-to-start"></i>
+				</div>
+				
+				<div class="player__btn player__btn--medium blue yellow" id="ride">
+					<i  onclick="myFunctionp2()" class="icon-play play-btn"></i>
+					<i onclick="myFunction()"  class="icon-pause pause-btn hide"></i>
+				</div>
+
+				<div class="player__btn player__btn--medium">
+					<i class="icon-to-end"></i>
+				</div>
+			</div>
+		</div>
+
+
+		<!--LDR-->
+		<div class="Player">
+			<div class="Player_controls">
+				<div class="player__btn player__btn--small">
+					<i class="icon-left"></i>
+				</div>
+				<h5 class="player__title"> Playing now</h5>
+				<div class="player__btn player__btn--small">
+					<i class="icon-heart press" id="Presed"></i>
+				</div>
+			</div>
+
+			<div class="player__album">
+			 <img class="player__img" src="https://i.pinimg.com/564x/fb/be/90/fbbe908035c51f365a6c142a86eeda6e.jpg" alt="" />
+			</div>
+			<h2 class="player__artist"><b> Broonklyn Baby </b></h2>
+			<h3 class="player__song"> Lana del Rey</h3>
+
+			<input class="player__level" type="range" value="5" min="0" />
+
+			<div class="audio--duration">
+				<div class="start">00:01</div>
+				<div class="end">05:55</div>
+			</div>
+
+			<audio class="player__audio" controls id="audio">
+				<source src="Audio/Lana Del Rey - Brooklyn Baby (Official Audio)(MP3_320K).mp3" type="Audio/mpeg" />
+			</audio>
+
+			<div class="Player_controls">
+				<div class="player__btn player__btn--medium">
+					<i class="icon-to-start"></i>
+				</div>
+				
+				<div class="player__btn player__btn--medium blue grey" id="play">
+					<i class="icon-play play-btn"></i>
+					<i class="icon-pause pause-btn hide"></i>
+				</div>
+
+				<div class="player__btn player__btn--medium">
+					<i class="icon-to-end"></i>
+				</div>
+			</div>
+		</div>
+	   
+	   <!-- CAS-->
+		<div class="Player">
+			<div class="Player_controls">
+				<div class="player__btn player__btn--small">
+					<i class="icon-left"></i>
+				</div>
+				<h5 class="player__title"> Playing now</h5>
+				<div class="player__btn player__btn--small">
+					<i class="icon-heart"></i>
+				</div>
+			</div>
+
+			<div class="player__album">
+			 <img class="player__img" src="https://i.pinimg.com/564x/a7/f5/77/a7f577bc1eeeac63452a8e82e1d58ca5.jpg" alt="" />
+			</div>
+			<h2 class="player__artist"><b>Apocalypse</b></h2>
+			<h3 class="player__song">Cigarettes After Sex </h3>
+
+			<input class="player__level" type="range" value="5" min="0" />
+
+			<div class="audio--duration">
+				<div class="start">00:00</div>
+				<div class="end">04:50</div>
+			</div>
+
+			<audio class="player__audio" controls id="CAS">
+				<source src="Audio/Apocalypse - Cigarettes After Sex(MP3_320K).mp3" type="Audio/mp3" />
+			</audio>
+
+			<div class="Player_controls">
+				<div class="player__btn player__btn--medium">
+					<i class="icon-to-start"></i>
+				</div>
+				
+				<div class="player__btn player__btn--medium blue black" id="Ap">
+					<i class="icon-play play-btn"></i>
+					<i class="icon-pause pause-btn hide"></i>
+				</div>
+
+				<div class="player__btn player__btn--medium">
+					<i class="icon-to-end"></i>
+				</div>
+			</div>
+		 </div>
+	   </div>
+	 </div>
+</div>
+
+
+<!--Otro container-->
+<div class="Container">
+	<div class="Player">
+		<div class="Player_controls">
+			<div class="player__btn player__btn--small">
+				<i class="icon-left"></i>
+			</div>
+			<h5 class="player__title"> Playing now</h5>
+			<div class="player__btn player__btn--small">
+				<i class="icon-heart"></i>
+			</div>
+		</div>
+
+		<div class="player__album">
+		 <img class="player__img" src="https://static.qobuz.com/images/covers/00/21/0720841232100_600.jpg" alt="" />
+		</div>
+		<h2 class="player__artist"><b>Neon Moon </b> </h2>
+		<h3 class="player__song"> Cigarettes After Sex </h3>
+
+		<input class="player__level" type="range" value="5" min="0" />
+
+		<div class="audio--duration">
+			<div class="start">00:00</div>
+			<div class="end">03:45</div>
+		</div>
+
+		<audio class="player__audio" controls id="Cas">
+			<source src="Audio/Neon Moon - Cigarettes After Sex(MP3_320K).mp3" type="Audio/mpeg" />
+		</audio>
+
+		<div class="Player_controls">
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-start"></i>
+			</div>
+			
+			<div class="player__btn player__btn--medium blue black" id="Neon">
+				<i class="icon-play play-btn"></i>
+				<i class="icon-pause pause-btn hide"></i>
+			</div>
+
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-end"></i>
+			</div>
+		</div>
+	</div>
+
+	<!-- Tame Impala-->
+	<div class="Player">
+		<div class="Player_controls">
+			<div class="player__btn player__btn--small">
+				<i class="icon-left"></i>
+			</div>
+			<h5 class="player__title"> Playing now</h5>
+			<div class="player__btn player__btn--small">
+				<i class="icon-heart"></i>
+			</div>
+		</div>
+
+		<div class="player__album">
+		 <img class="player__img" src="https://monterreyrock.com/wp-content/uploads/2015/07/Tame-Impala-Currents-final-packshot-1200px_800.jpg" alt="" />
+		</div>
+		<h2 class="player__artist"><b>Yes I'm changing </b> </h2>
+		<h3 class="player__song"> Tame Impala </h3>
+
+		<input class="player__level" type="range" value="5" min="0" />
+
+		<div class="audio--duration">
+			<div class="start">00:00</div>
+			<div class="end">04:30</div>
+		</div>
+
+		<audio class="player__audio" controls id="TI">
+			<source src="Audio/Tame Impala - Yes I_m Changing (Official Audio)(MP3_320K).mp3" type="Audio/mpeg" />
+		</audio>
+
+		<div class="Player_controls">
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-start"></i>
+			</div>
+			
+			<div class="player__btn player__btn--medium blue purple" id="YIC">
+				<i class="icon-play play-btn"></i>
+				<i class="icon-pause pause-btn hide"></i>
+			</div>
+
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-end"></i>
+			</div>
+		</div>
+	</div>
+   
+   
+   <!--Clairo-->
+	<div class="Player">
+		<div class="Player_controls">
+			<div class="player__btn player__btn--small">
+				<i class="icon-left"></i>
+			</div>
+			<h5 class="player__title"> Playing now</h5>
+			<div class="player__btn player__btn--small">
+				<i class="icon-heart"></i>
+			</div>
+		</div>
+
+		<div class="player__album">
+		 <img class="player__img" src="https://images-na.ssl-images-amazon.com/images/I/61nK49YdZ5L._SL1200_.jpg" alt="" />
+		</div>
+		<h2 class="player__artist"><b> Bags </b> </h2>
+		<h3 class="player__song">  Clairo </h3>
+
+		<input class="player__level" type="range" value="5" min="0" />
+
+		<div class="audio--duration">
+			<div class="start">00:00</div>
+			<div class="end">04:20</div>
+		</div>
+
+		<audio class="player__audio" controls id="Clai">
+			<source src="Audio/Clairo - Bags(MP3_320K).mp3" type="Audio/mpeg" />
+		</audio>
+
+		<div class="Player_controls">
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-start"></i>
+			</div>
+			
+			<div class="player__btn player__btn--medium blue clear" id="Bags">
+				<i class="icon-play play-btn"></i>
+				<i class="icon-pause pause-btn hide"></i>
+			</div>
+
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-end"></i>
+			</div>
+		</div>
+	 </div>
+   </div>
+ </div>
+</div>
+
+<!-- ultimo container-->
+<div class="Container">
+	<div class="Player">
+		<div class="Player_controls">
+			<div class="player__btn player__btn--small">
+				<i class="icon-left"></i>
+			</div>
+			<h5 class="player__title"> Playing now</h5>
+			<div class="player__btn player__btn--small">
+				<i class="icon-heart"></i>
+			</div>
+		</div>
+
+		<div class="player__album">
+		 <img class="player__img" src="https://img.discogs.com/0U0dk1sThGxZdRV-DoEEo67XQ3g=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-11296918-1513656567-2480.jpeg.jpg" alt="" />
+		</div>
+		<h2 class="player__artist"><b>Girls like Girls </b> </h2>
+		<h3 class="player__song"> Hayley Kiyoko </h3>
+
+		<input class="player__level" type="range" value="5" min="0" />
+
+		<div class="audio--duration">
+			<div class="start">00:00</div>
+			<div class="end">03:34</div>
+		</div>
+
+		<audio class="player__audio" controls id="Hayley">
+			<source src="Audio/Hayley Kiyoko - Girls Like Girls (Audio)(MP3_320K).mp3" type="Audio/mpeg" />
+		</audio>
+
+		<div class="Player_controls">
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-start"></i>
+			</div>
+			
+			<div class="player__btn player__btn--medium blue sky" id="FMF">
+				<i class="icon-play play-btn"></i>
+				<i class="icon-pause pause-btn hide"></i>
+			</div>
+
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-end"></i>
+			</div>
+		</div>
+	</div>
+
+	<!-- Billie -->
+	<div class="Player">
+		<div class="Player_controls">
+			<div class="player__btn player__btn--small">
+				<i class="icon-left"></i>
+			</div>
+			<h5 class="player__title"> Playing now</h5>
+			<div class="player__btn player__btn--small">
+				<i class="icon-heart"></i>
+			</div>
+		</div>
+
+		<div class="player__album">
+		 <img class="player__img" src="https://images-na.ssl-images-amazon.com/images/I/91UUbDedB1S._SL1500_.jpg" alt="" />
+		</div>
+		<h2 class="player__artist"><b>Billie Bossa Nova</b> </h2>
+		<h3 class="player__song">  Billie Eilish </h3>
+
+		<input class="player__level" type="range" value="5" min="0" />
+
+		<div class="audio--duration">
+			<div class="start">00:00</div>
+			<div class="end">03:16</div>
+		</div>
+
+		<audio class="player__audio" controls id="BE">
+			<source src="Audio/Billie Eilish - Billie Bossa Nova (Official Lyric Video)(MP3_320K).mp3" type="Audio/mpeg" />
+		</audio>
+
+		<div class="Player_controls">
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-start"></i>
+			</div>
+			
+			<div class="player__btn player__btn--medium blue billie" id="BBN">
+				<i class="icon-play play-btn"></i>
+				<i class="icon-pause pause-btn hide"></i>
+			</div>
+
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-end"></i>
+			</div>
+		</div>
+	</div>
+   
+   
+   <!--The lumineers-->
+	<div class="Player">
+		<div class="Player_controls">
+			<div class="player__btn player__btn--small">
+				<i class="icon-left"></i>
+			</div>
+			<h5 class="player__title"> Playing now</h5>
+			<div class="player__btn player__btn--small">
+				<i class="icon-heart"></i>
+			</div>
+		</div>
+
+		<div class="player__album">
+		 <img class="player__img" src="https://loff.it/wp-content/uploads/2016/02/loffit-ophelia-the-lumineers-02.jpg" alt="" />
+		</div>
+		<h2 class="player__artist"><b>Sleep on the floor </b> </h2>
+		<h3 class="player__song"> The Lumineers </h3>
+
+		<input class="player__level" type="range" value="5" min="0" />
+
+		<div class="audio--duration">
+			<div class="start">00:00</div>
+			<div class="end">03:31</div>
+		</div>
+
+		<audio class="player__audio" controls id="TL">
+			<source src="Audio/Sleep On The Floor __ The Lumineers Lyrics(MP3_320K).mp3" type="Audio/mpeg" />
+		</audio>
+
+		<div class="Player_controls">
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-start"></i>
+			</div>
+			
+			<div class="player__btn player__btn--medium blue grey" id="SOF">
+				<i class="icon-play play-btn"></i>
+				<i class="icon-pause pause-btn hide"></i>
+			</div>
+
+			<div class="player__btn player__btn--medium">
+				<i class="icon-to-end"></i>
+			</div>
+		</div>
+	 </div>
+   </div>
+ </div>
+</div>
+</body>
+<script src="js/main.js"> </script>
+</html>
